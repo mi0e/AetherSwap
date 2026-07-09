@@ -2,7 +2,7 @@ import re
 import time
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
-from config import get_steam
+from app.config_store import get_steam
 from steam.inventory import CS2_APP_ID, fetch_cs2_inventory
 from steam.session import create_market_session
 def _safe_iso(ts: float) -> Optional[str]:

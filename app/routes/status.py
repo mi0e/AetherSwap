@@ -11,7 +11,7 @@ from app.state import (
     get_status,
     set_pending_payment,
 )
-from config import get_buff
+from app.config_store import get_buff
 from pydantic import BaseModel
 router = APIRouter()
 class ConfirmBody(BaseModel):

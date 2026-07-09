@@ -10,7 +10,7 @@ from app.state import (
     replace_transactions,
 )
 from app.config_loader import load_app_config_validated, save_app_config_validated
-from config import load_app_config, save_credentials, get_all_credentials
+from app.config_store import load_app_config, save_credentials, get_all_credentials
 from app.accounts import list_accounts, replace_all as accounts_replace_all
 router = APIRouter()
 class ConfigBody(BaseModel):

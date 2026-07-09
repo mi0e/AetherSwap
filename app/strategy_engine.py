@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from app.config_loader import load_app_config_validated, save_app_config_validated
-from config import get_app_config_path
+from app.config_store import get_app_config_path
 
 
 STRATEGY_STORE_PATH = get_app_config_path().parent / "strategies.json"

@@ -3,7 +3,7 @@ import re
 import time
 from typing import Any, Callable, Dict, Optional, Tuple
 import requests
-from config import get_steam
+from app.config_store import get_steam
 from steam.session import create_market_session
 from utils.delay import jittered_sleep
 try:

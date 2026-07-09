@@ -1,7 +1,7 @@
 import threading
 import time as _time
 from app.config_schema import DEFAULTS, _validate_ranges, merge, validate_and_fill
-from config import (
+from app.config_store import (
     get_buff,
     get_steam,
     load_app_config,

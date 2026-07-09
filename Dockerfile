@@ -11,7 +11,7 @@ COPY . .
 RUN mkdir -p /app/config /app/log \
     && chown -R pwuser:pwuser /app
 
-USER pwuser
+USER root
 
 EXPOSE 28472
 
@@ -20,4 +20,5 @@ ENV AETHERSWAP_MODE=server \
     AETHERSWAP_HOST=0.0.0.0 \
     AETHERSWAP_PORT=28472
 
+ENTRYPOINT ["sh", "-c", "mkdir -p /app/config /app/log && chown -R pwuser:pwuser /app/config /app/log && exec runuser -u pwuser -- \"$@\"", "aetherswap-entrypoint"]
 CMD ["python", "run.py"]
